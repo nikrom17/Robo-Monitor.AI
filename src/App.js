@@ -10,22 +10,13 @@ class App extends Component {
     pickState: 1
   }
 
-  toggleFeed = () => {
-    const doesShow = this.state.pickState;
-    this.setState( { pickState: 1} );
-    this.setState( {robotError: false} );
-  }
-
-  toggleErrors = () => {
-    const doesShow = this.state.pickState;
-    this.setState( { pickState: 2 } );
-    this.setState( {robotError: true} );
-  }
-
-  toggleStats = () => {
-    const doesShow = this.state.pickState;
-    this.setState( { pickState: 3 } );
-    this.setState( {robotError: false} );
+  toggleScreen = (screenId) => {
+    let errorState = false;
+    if (screenId === 2) {
+      errorState = true;
+    }
+    this.setState( { pickState: screenId} );
+    this.setState( {robotError: errorState} );
   }
 
   render () {
@@ -40,7 +31,6 @@ class App extends Component {
           <LiveFeed />
         </div>
       );
-
       btnClass1 = classes.pressed;
     }
     else if (this.state.pickState === 2) {
@@ -62,7 +52,7 @@ class App extends Component {
     }
 
     const assignedClasses = [];
-    let ErrorStatus = null;
+    let ErrorStatus = '';
 
     if ( this.state.robotError ) {
       assignedClasses.push( classes.red );
@@ -79,13 +69,13 @@ class App extends Component {
           <p className={assignedClasses.join( ' ' )}>Status: {ErrorStatus}</p>
           <button
             className={btnClass1}
-            onClick={this.toggleFeed}>Live Feed</button>
+            onClick={() => this.toggleScreen(1)}>Live Feed</button>
           <button
             className={btnClass2}
-            onClick={this.toggleErrors}>Error History</button>
+            onClick={() => this.toggleScreen(2)}>Error History</button>
           <button
             className={btnClass3}
-            onClick={this.toggleStats}>System Stats</button>
+            onClick={() => this.toggleScreen(3)}>System Stats</button>
             {screen}
         </div>
     );
