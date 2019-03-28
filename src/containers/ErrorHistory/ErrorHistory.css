@@ -1,20 +1,8 @@
-.ErrorHistory {
-    width: calc(50% - 54px);
-    margin: 10px 10px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
-    padding: 16px;
-    text-align: center;
-    float: left;
-    overflow: hidden; 
-}
-
-.ErrorHistory img {
-	height: 200px;
+.errorHistory {
+  width: 85%;
+  margin: 0px auto;
 }
 
 @media (min-width: 500px) {
-    .Person {
-        width: 450px;
-    }
 }
+
