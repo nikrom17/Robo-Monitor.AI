@@ -1,4 +1,4 @@
-# Robo-<span>Monitor</span>.AI
+# Robo-<span>Monitor</span>.AI (IoT World Hackathon Submission)
 
 Robot-Monitor is a smart error monitoring solution for industrial robot systems. One of the most fustrating components of having an automated system in your manucaturing process is when its not working. Our system was designed to detect the error using machine learning and relay the problem to the machine opperator. This eliminates the time it takes the opperator to figure out what is wrong with the system.
 
