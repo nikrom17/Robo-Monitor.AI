@@ -33,3 +33,5 @@ The error screen displays a log of the current or previous system faults. For th
 ## Authors
 
 **Nikolaus Roman**
+**Jacob Polloreno**
+**Cristian Franco**
